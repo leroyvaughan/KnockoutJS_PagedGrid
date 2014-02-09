@@ -1,0 +1,105 @@
+/* two color gradient */
+body {
+  background-color: #FFFFCC; }
+  body h1 {
+    color: #1B7DD3; }
+
+#content table.ko-grid {
+  width: 98%;
+  border: 1px solid #5f6961;
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+  behavior: url(css/PIE.htc);
+  /* since [< IE9] sucks, some of this is applied via main.js */ }
+  #content table.ko-grid th, #content table.ko-grid td {
+    border: 1px solid #5F6961;
+    color: #222;
+    padding: 4px 7px;
+    text-align: left; }
+  #content table.ko-grid th {
+    background-color: #222222;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #222222), color-stop(50%, #555555), color-stop(100%, #222222));
+    background-image: -webkit-linear-gradient(top, #222222 0%, #555555 50%, #222222 100%);
+    background-image: -moz-linear-gradient(top, #222222 0%, #555555 50%, #222222 100%);
+    background-image: -ms-linear-gradient(top, #222222 0%, #555555 50%, #222222 100%);
+    background-image: -o-linear-gradient(top, #222222 0%, #555555 50%, #222222 100%);
+    background-image: linear-gradient(top, #222222 0%, #555555 50%, #222222 100%);
+    pie-background: linear-gradient(top, #222222, #555555, #222222);
+    behavior: url(css/PIE.htc);
+    /* @include TwoColorGradient($oColor, $iColor); */
+    /* not working in IE8 */
+    border-width: 1px 1px 2px;
+    color: #fff; }
+    #content table.ko-grid th .link {
+      cursor: pointer;
+      display: inline-block;
+      text-decoration: underline; }
+    #content table.ko-grid th .activeSort {
+      color: #CCA015;
+      cursor: text;
+      font-weight: bold;
+      text-decoration: none; }
+  #content table.ko-grid th:first-child {
+    -moz-border-radius: 12px 0 0 0;
+    -webkit-border-radius: 12px 0 0 0;
+    border-radius: 12px 0 0 0;
+    behavior: url(css/PIE.htc);
+    width: 30%; }
+  #content table.ko-grid th:first-child + th + th + th {
+    -moz-border-radius: 0 12px 0 0;
+    -webkit-border-radius: 0 12px 0 0;
+    border-radius: 0 12px 0 0;
+    behavior: url(css/PIE.htc); }
+  #content table.ko-grid th:first-child + th {
+    width: 30%; }
+  #content table.ko-grid th:first-child + th + th {
+    width: 20%; }
+  #content table.ko-grid td {
+    background-color: #EDF0F5; }
+  #content table.ko-grid tr.lastTR td:first-child, #content table.ko-grid .botLeftTD {
+    -moz-border-radius: 0 0 0 12px;
+    -webkit-border-radius: 0 0 0 12px;
+    border-radius: 0 0 0 12px;
+    behavior: url(css/PIE.htc); }
+  #content table.ko-grid tr.lastTR td:first-child + td + td + td, #content table.ko-grid .botRtTD {
+    -moz-border-radius: 0 0 12px 0;
+    -webkit-border-radius: 0 0 12px 0;
+    border-radius: 0 0 12px 0;
+    behavior: url(css/PIE.htc); }
+#content .ko-grid-pageLinks {
+  margin: 10px; }
+  #content .ko-grid-pageLinks a, #content .ko-grid-pageLinks a:link, #content .ko-grid-pageLinks a:visited {
+    border: 1px solid #cccccc;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    behavior: url(css/PIE.htc);
+    background-color: #222222;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #222222), color-stop(100%, #555555));
+    background: -webkit-linear-gradient(top, #222222 0%, #555555 100%);
+    background: -moz-linear-gradient(top, #222222 0%, #555555 100%);
+    background: -ms-linear-gradient(top, #222222 0%, #555555 100%);
+    background: -o-linear-gradient(top, #222222 0%, #555555 100%);
+    background: linear-gradient(top, #222222 0%, #555555 100%);
+    pie-background: linear-gradient(top, #222222, #555555);
+    behavior: url(css/PIE.htc);
+    background-color: #000;
+    color: #fff;
+    display: inline-block;
+    margin: 0 2px;
+    padding: 5px 10px;
+    text-decoration: none; }
+    #content .ko-grid-pageLinks a:hover, #content .ko-grid-pageLinks a.selected, #content .ko-grid-pageLinks a:link:hover, #content .ko-grid-pageLinks a:link.selected, #content .ko-grid-pageLinks a:visited:hover, #content .ko-grid-pageLinks a:visited.selected {
+      background-color: #555555;
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #555555), color-stop(100%, #999999));
+      background: -webkit-linear-gradient(top, #555555 0%, #999999 100%);
+      background: -moz-linear-gradient(top, #555555 0%, #999999 100%);
+      background: -ms-linear-gradient(top, #555555 0%, #999999 100%);
+      background: -o-linear-gradient(top, #555555 0%, #999999 100%);
+      background: linear-gradient(top, #555555 0%, #999999 100%);
+      pie-background: linear-gradient(top, #555555, #999999);
+      behavior: url(css/PIE.htc);
+      background-color: #EDF0F5;
+      color: #000; }
+

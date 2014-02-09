@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Books that I read in 2012 & 2013</title>
+    <link href="css/main.css" rel="stylesheet"/>
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/knockout_v3.js"></script>
+    <script src="js/koGrid.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <div id="hdr">
+        <h1>A list of books that I've read recently</h1>
+    </div>
+
+    <div id="content">
+        <p>This is just a demo page for the Knockout JS Paged Grid.  I already had a list of the books I've read, so I put them into a SQL DB, created a WCF Web Service to dish out a JSON Feed, and then downloaded KnockoutJS so I could play with it and my data.</p>
+
+        <div id="gridWrap">
+            <div data-bind="simpleGrid: gridViewModel"></div>
+        </div>
+    </div>
+</body>
+</html>

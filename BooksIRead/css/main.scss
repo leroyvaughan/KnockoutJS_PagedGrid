@@ -1,0 +1,100 @@
+@import 'mixins';
+
+body
+{
+    background-color:#FFFFCC;
+
+    h1{ color:#1B7DD3; }
+}
+
+#content{
+
+    $oColor: #222;
+    $iColor: #555;
+
+    table.ko-grid{
+        width:98%;
+        @include setBorder(1px solid #5F6961, 12px);
+        
+        th, td{
+            border:1px solid #5F6961;
+            color:#222;
+            padding:4px 7px;
+            text-align:left;
+
+        }
+        th{
+            @include ThreeColorGradient($oColor, $iColor, $oColor);
+            /* @include TwoColorGradient($oColor, $iColor); */ /* not working in IE8 */
+            border-width:1px 1px 2px;
+            color:#fff;
+
+            .link{
+                cursor:pointer;
+                display:inline-block;
+                text-decoration:underline;
+            }
+
+            .activeSort{
+                color:#CCA015;
+                cursor:text;
+                font-weight:bold;
+                text-decoration:none;
+            }
+        }
+        th:first-child{
+            @include rndCorners(12px 0 0 0);
+            width:30%;
+        }
+
+        th:first-child + th + th + th{
+            @include rndCorners(0 12px 0 0);
+        }
+
+        th:first-child + th{
+            width:30%;
+        }
+
+        th:first-child + th + th{
+            width:20%;
+        }
+
+
+        td{
+            background-color:#EDF0F5;
+        }
+
+        /* since [< IE9] sucks, some of this is applied via main.js */
+        tr.lastTR td:first-child, .botLeftTD{
+            @include rndCorners(0 0 0 12px);
+        }
+        tr.lastTR td:first-child + td + td + td,  .botRtTD{
+            @include rndCorners(0 0 12px 0);
+        }
+    }
+
+    .ko-grid-pageLinks{
+        margin:10px;
+
+        span{
+
+        }
+
+        a, a:link, a:visited{
+            @include setBorder(1px solid #ccc, 5px);
+            @include TwoColorGradient($oColor, $iColor);
+            background-color:#000;
+            color:#fff;
+            display:inline-block;
+            margin:0 2px;
+            padding:5px 10px;
+            text-decoration:none;
+
+            &:hover, &.selected{
+                @include TwoColorGradient($iColor, #999);
+                background-color:#EDF0F5;
+                color:#000;
+            }
+        }
+    }
+}
